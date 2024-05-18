@@ -60,45 +60,45 @@
     </div>
 </section>
 
-<!--<div>-->
-<!--    <section id="pdf" class="py-5">-->
-<!--        <h1>Upload PDF File</h1>-->
-<!--        <form method="post" enctype="multipart/form-data">-->
-<!--            <input type="file" name="file" id="fileInput" accept="application/pdf">-->
-<!--            <input type="submit" value="Upload">-->
-<!--        </form>-->
+<div>
+    <section id="pdf" class="py-5">
+        <h1>Upload PDF File</h1>
+        <form method="post" enctype="multipart/form-data">
+            <input type="file" name="file" id="fileInput" accept="application/pdf">
+            <input type="submit" value="Upload">
+        </form>
 
-<!--        <div id="pdfDisplay"></div>-->
+        <div id="pdfDisplay"></div>
 
-<!--        <script>-->
-<!--                document.getElementById('fileInput').addEventListener('change', function(event) {-->
-<!--                    const file = event.target.files[0];-->
-<!--                    if (file && file.type === 'application/pdf') {-->
-<!--                        const fileReader = new FileReader();-->
-<!--                        fileReader.onload = function(e) {-->
-<!--                            const pdfData = e.target.result;-->
-<!--                            displayPDF(pdfData);-->
-<!--                        };-->
-<!--                        fileReader.readAsArrayBuffer(file);-->
-<!--                    } else {-->
-<!--                        alert('Please select a valid PDF file.');-->
-<!--                    }-->
-<!--                });-->
+        <script>
+                document.getElementById('fileInput').addEventListener('change', function(event) {
+                    const file = event.target.files[0];
+                    if (file && file.type === 'application/pdf') {
+                        const fileReader = new FileReader();
+                        fileReader.onload = function(e) {
+                            const pdfData = e.target.result;
+                            displayPDF(pdfData);
+                        };
+                        fileReader.readAsArrayBuffer(file);
+                    } else {
+                        alert('Please select a valid PDF file.');
+                    }
+                });
 
-<!--                function displayPDF(pdfData) {-->
-<!--                    const pdfDisplay = document.getElementById('pdfDisplay');-->
-<!--                    const blob = new Blob([pdfData], { type: 'application/pdf' });-->
-<!--                    const url = URL.createObjectURL(blob);-->
-<!--                    const iframe = document.createElement('iframe');-->
-<!--                    iframe.src = url;-->
-<!--                    iframe.width = '100%';-->
-<!--                    iframe.height = '600px';-->
-<!--                    pdfDisplay.innerHTML = '';-->
-<!--                    pdfDisplay.appendChild(iframe);-->
-<!--                }-->
-<!--        </script>-->
-<!--    </section>-->
-<!--</div>-->
+                function displayPDF(pdfData) {
+                    const pdfDisplay = document.getElementById('pdfDisplay');
+                    const blob = new Blob([pdfData], { type: 'application/pdf' });
+                    const url = URL.createObjectURL(blob);
+                    const iframe = document.createElement('iframe');
+                    iframe.src = url;
+                    iframe.width = '100%';
+                    iframe.height = '600px';
+                    pdfDisplay.innerHTML = '';
+                    pdfDisplay.appendChild(iframe);
+                }
+        </script>
+    </section>
+</div>
 
 
 <!-- Portfolio Section -->
