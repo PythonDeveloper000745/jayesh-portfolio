@@ -175,192 +175,68 @@
     </div>
 </section>
 
-
-
-
-
-<!--&lt;!&ndash;###################################################################################################################################&ndash;&gt;-->
-<!--&lt;!&ndash; ContactEmail Section &ndash;&gt;-->
-<!--<section id="contactEmail" class="py-5">-->
-<!--    <div class="container">-->
-<!--        <div class="row justify-content-center">-->
-<!--            <div class="col-lg-8 text-center">-->
-<!--                <h2>Contact Me</h2>-->
-<!--                <p class="lead">Feel free to reach out to me for any inquiries or collaborations.</p>-->
-<!--                <form id="contactFormEmail">-->
-<!--                    <div class="mb-3">-->
-<!--                        <input type="text" class="form-control" id="nameEmail" placeholder="Your Name" required>-->
-<!--                    </div>-->
-<!--                    <div class="mb-3">-->
-<!--                        <input type="email" class="form-control" id="emailEmail" placeholder="Your Email" required>-->
-<!--                    </div>-->
-<!--                    <div class="mb-3">-->
-<!--                        <textarea class="form-control" id="messageEmail" rows="4" placeholder="Your Message" required></textarea>-->
-<!--                    </div>-->
-<!--                    <button type="submit" class="btn btn-primary">Send Email</button>-->
-<!--                </form>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
-
-<!--&lt;!&ndash; Bootstrap Bundle with Popper &ndash;&gt;-->
-<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>-->
-
-<!--&lt;!&ndash; EmailJS SDK &ndash;&gt;-->
-<!--<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>-->
-<!--<script type="text/javascript">-->
-<!--   (function(){-->
-<!--      emailjs.init("1UqqPP6hL4Ty1Drkl"); // Replace 'YOUR_USER_ID' with your actual user ID from EmailJS-->
-<!--   })();-->
-<!--</script>-->
-
-<!--&lt;!&ndash; Custom JavaScript for Smooth Scrolling and Form Submission &ndash;&gt;-->
-<!--<script>-->
-<!--    document.querySelectorAll('a[href^="#"]').forEach(anchor => {-->
-<!--        anchor.addEventListener('click', function (e) {-->
-<!--            e.preventDefault();-->
-<!--            document.querySelector(this.getAttribute('href')).scrollIntoView({-->
-<!--                behavior: 'smooth'-->
-<!--            });-->
-<!--        });-->
-<!--    });-->
-
-<!--    document.getElementById('contactForm').addEventListener('submit', function(event) {-->
-<!--        event.preventDefault();-->
-
-<!--        const name = document.getElementById('nameEmail').value;-->
-<!--        const email = document.getElementById('emailEmail').value;-->
-<!--        const message = document.getElementById('messageEmail').value;-->
-
-<!--        // Initialize EmailJS with your user ID-->
-<!--        emailjs.init("1UqqPP6hL4Ty1Drkl");-->
-
-<!--        // Get the sender's email from the form input-->
-<!--        const senderEmail = email;-->
-
-<!--        emailjs.send('service_ienkle3', 'template_2lv22hn', {-->
-<!--            from_name: name,-->
-<!--            from_email: senderEmail, // Use sender's email here-->
-<!--            message: message-->
-<!--        })-->
-<!--        .then((response) => {-->
-<!--            console.log('SUCCESS!', response.status, response.text);-->
-<!--            alert('Message sent successfully!');-->
-<!--            document.getElementById('contactFormEmail').reset();-->
-<!--        })-->
-<!--        .catch((error) => {-->
-<!--            console.error('Error:', error);-->
-<!--            alert('Failed to send the message, please try again.');-->
-<!--        });-->
-<!--    });-->
-<!--</script>-->
-<!--&lt;!&ndash;###################################################################################################################################&ndash;&gt;-->
-
-
-
-<!--&lt;!&ndash;###################################################################################################################################&ndash;&gt;-->
-<!--&lt;!&ndash; Contact Section &ndash;&gt;-->
-<!--<section id="contact" class="py-5">-->
-<!--    <div class="container">-->
-<!--        <div class="row justify-content-center">-->
-<!--            <div class="col-lg-8 text-center">-->
-<!--                <h2>Contact Me</h2>-->
-<!--                <p class="lead">Feel free to reach out to me for any inquiries or collaborations.</p>-->
-<!--                <form id="contactForm">-->
-<!--                    <div class="mb-3">-->
-<!--                        <input type="text" class="form-control" id="name" placeholder="Your Name" required>-->
-<!--                    </div>-->
-<!--                    <div class="mb-3">-->
-<!--                        <input type="number" class="form-control" id="number" placeholder="Your Number" required>-->
-<!--                    </div>-->
-<!--                    <div class="mb-3">-->
-<!--                        <textarea class="form-control" id="message" rows="4" placeholder="Your Message" required></textarea>-->
-<!--                    </div>-->
-<!--                    <button type="button" class="btn btn-primary" onclick="sendWhatsAppMessage()">Send Message via WhatsApp</button>-->
-<!--                </form>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
-
-
-<!--<script>-->
-<!--    function sendWhatsAppMessage() {-->
-<!--        var name = document.getElementById("name").value;-->
-<!--        var number = document.getElementById("number").value; // Get the entered number-->
-<!--        var message = document.getElementById("message").value;-->
-<!--        // You can modify this phone number to the desired recipient's WhatsApp number-->
-<!--        var phoneNumber = "7057053741";-->
-<!--        // Construct the message with name, number, and inquiry-->
-<!--        var whatsappMessage = "Hi, my name is " + name + ". My number is " + number + ". Message: " + message;-->
-<!--        // Encode the message for URL-->
-<!--        var encodedMessage = encodeURIComponent(whatsappMessage);-->
-<!--        // Open WhatsApp with the pre-filled message-->
-<!--        window.open("https://wa.me/" + phoneNumber + "?text=" + encodedMessage, '_blank');-->
-<!--    }-->
-<!--</script>-->
-<!--&lt;!&ndash;###################################################################################################################################&ndash;&gt;-->
-
-<!-- Contact Buttons Section -->
-<section id="contactButtons" class="py-5">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <h2>Contact Me</h2>
-                <p class="lead">Feel free to reach out to me for any inquiries or collaborations.</p>
-                <button id="emailButton" class="btn btn-primary m-2">Send Email</button>
-                <button id="whatsappButton" class="btn btn-secondary m-2">Send Message</button>
+<!--###################################################################################################################################-->
+<div id="contact">
+    <!-- Contact Buttons Section -->
+    <section id="contactButtons" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2>Contact Me</h2>
+                    <p class="lead">Feel free to reach out to me for any inquiries or collaborations.</p>
+                    <button id="emailButton" class="btn btn-primary m-2">Send Email</button>
+                    <button id="whatsappButton" class="btn btn-secondary m-2">Send Message</button>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Email Contact Form Section -->
-<section id="contactEmail" class="py-5 d-none">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <h2>Send an Email</h2>
-                <form id="contactFormEmail">
-                    <div class="mb-3">
-                        <input type="text" class="form-control" id="nameEmail" placeholder="Your Name" required>
-                    </div>
-                    <div class="mb-3">
-                        <input type="email" class="form-control" id="emailEmail" placeholder="Your Email" required>
-                    </div>
-                    <div class="mb-3">
-                        <textarea class="form-control" id="messageEmail" rows="4" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Email</button>
-                </form>
+    <!-- Email Contact Form Section -->
+    <section id="contactEmail" class="py-5 d-none">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2>Send an Email</h2>
+                    <form id="contactFormEmail">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="nameEmail" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="emailEmail" placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" id="messageEmail" rows="4" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Email</button>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- WhatsApp Contact Form Section -->
-<section id="contactWhatsApp" class="py-5 d-none">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <h2>Send a Message via WhatsApp</h2>
-                <form id="contactFormWhatsApp">
-                    <div class="mb-3">
-                        <input type="text" class="form-control" id="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="mb-3">
-                        <input type="number" class="form-control" id="number" placeholder="Your Number" required>
-                    </div>
-                    <div class="mb-3">
-                        <textarea class="form-control" id="message" rows="4" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="button" class="btn btn-secondary" onclick="sendWhatsAppMessage()">Send Message</button>
-                </form>
+    <!-- WhatsApp Contact Form Section -->
+    <section id="contactWhatsApp" class="py-5 d-none">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2>Send a Message via WhatsApp</h2>
+                    <form id="contactFormWhatsApp">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="number" class="form-control" id="number" placeholder="Your Number" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" id="message" rows="4" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="button" class="btn btn-secondary" onclick="sendWhatsAppMessage()">Send Message</button>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+</div>
 
 <!-- Bootstrap Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -418,6 +294,7 @@
         window.open("https://wa.me/" + phoneNumber + "?text=" + encodedMessage, '_blank');
     }
 </script>
+<!--###################################################################################################################################-->
 
 
 
